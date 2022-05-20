@@ -1,0 +1,24 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Product";
+    //List<Product> products = Model;
+}
+
+<div class="container mt-5">
+    <div class="row">
+        @foreach (Product product in Model)
+        {
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="~/Uploads/images/@product.Image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Description</p>
+                        <span>Price: @product.Price $</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
